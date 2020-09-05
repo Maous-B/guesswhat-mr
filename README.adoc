@@ -135,7 +135,9 @@ class Guess
 
 === Télécharger le projet de démarrage
 
-TIP: Conseil : utiliser l'instruction `git clone`
+TIP: Conseil : utiliser l'instruction `git clone` ou encore mieux, si vous êtes connecté à GiltLab avec votre compte,
+faire directement, en ligne, un `fork` de ce projet ; vous pourrez ainsi directement cloner, sur votre machine de dev,
+votre nouveau projet (et réaliser des `commit` et `push` de votre travail).
 
 Une fois cloné, **aller à la racine du projet** puis lancer les commandes suivantes :
 
