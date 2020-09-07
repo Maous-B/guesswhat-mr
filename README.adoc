@@ -269,11 +269,12 @@ Tout se passe donc dans les classes de tests !
 
 == Livraison
 
-Modalité de livraison (mode « binôme ») : dépôt sur GitLab avec un README.adoc faisant référence au sujet
-(dépôt _guesswhat_ initial)  et présentant votre travail.
+Modalité de livraison (mode « binôme ») : dépôt sur GitLab avec un README.adoc incluant un lien vers dépôt initial _guesswhat_ et un vers votre dépôt gitlab et *présentant votre travail* (rapport de projet).
 
 Ressource utile : https://docs.gitlab.com/ee/user/asciidoc.html[courte documentation asciidoc sur GitLab]
 
 La deadline vous sera communiquée sur l'espace ENT dédiée.
+
+Le livrable sera une version *PDF* de votre REAMDE.adoc : sous PPHPStorm, `View|Appearence|Enter Presentation Mode` (c'est un mode `WYSIWYG`), le menu du haut dispose d'une commande d'export PDF : pour quitter ce mode, activer le menu en haut en déplaçant le curseur de la souris vers le haut de l'écran et choisir `Exit Preentation Mode`.
 
 Bonne analyse et programmation !
