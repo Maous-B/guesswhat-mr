@@ -275,6 +275,6 @@ Ressource utile : https://docs.gitlab.com/ee/user/asciidoc.html[courte document
 
 La deadline vous sera communiquée sur l'espace ENT dédiée.
 
-Le livrable sera une version *PDF* de votre REAMDE.adoc : sous PPHPStorm, `View|Appearence|Enter Presentation Mode` (c'est un mode `WYSIWYG`), le menu du haut dispose d'une commande d'export PDF : pour quitter ce mode, activer le menu en haut en déplaçant le curseur de la souris vers le haut de l'écran et choisir `Exit Preentation Mode` (quitte le plein écran).
+Le livrable sera une version *PDF* de votre REAMDE.adoc : sous PHPStorm, `View|Appearence|Enter Presentation Mode` (c'est un mode `WYSIWYG`), le menu du haut dispose d'une commande d'export PDF : pour quitter ce mode, activer le menu en haut en déplaçant le curseur de la souris vers le haut de l'écran et choisir `Exit Presentation Mode` (quitte le plein écran).
 
 Bonne analyse et programmation !
