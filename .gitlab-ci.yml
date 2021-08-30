@@ -13,6 +13,31 @@
 #
 # For more information, see: https://docs.gitlab.com/ee/ci/yaml/index.html#stages
 
+image: asciidoctor/docker-asciidoctor
+pdf:
+    stage: build
+    script:
+        - asciidoctor-pdf -D public documentation.adoc
+        - asciidoctor-pdf -D public <votre documentation.adoc>
+    only:
+        - master
+    artifacts:
+        name: "documentation-pdf"
+        paths:
+            - public/
+
+pages:
+    stage: deploy
+    script:
+        - asciidoctor -o index.html -D public documentation.adoc
+        - asciidoctor -o <nom de votre fichier.html> -D public <votre documentation.adoc>
+    only:
+        - master
+    artifacts:
+        name: "documentation-pdf"
+        paths:
+            - public/
+
 stages:          # List of stages for jobs, and their order of execution
   - build
   - test
