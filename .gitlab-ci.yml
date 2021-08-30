@@ -17,8 +17,8 @@ image: asciidoctor/docker-asciidoctor
 pdf:
     stage: build
     script:
-        - asciidoctor-pdf -D public documentation.adoc
-        - asciidoctor-pdf -D public <votre documentation.adoc>
+        - asciidoctor-pdf -D public README.adoc
+        
     only:
         - master
     artifacts:
@@ -30,7 +30,6 @@ pages:
     stage: deploy
     script:
         - asciidoctor -o index.html -D public documentation.adoc
-        - asciidoctor -o <nom de votre fichier.html> -D public <votre documentation.adoc>
     only:
         - master
     artifacts:
