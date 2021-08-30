@@ -17,7 +17,7 @@ image: asciidoctor/docker-asciidoctor
 pdf:
     stage: build
     script:
-        - asciidoctor-pdf -D public README.adoc
+        - asciidoctor-pdf -D public ./README.adoc
         
     only:
         - master
