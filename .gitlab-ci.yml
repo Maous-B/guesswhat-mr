@@ -29,7 +29,7 @@ pdf:
 pages:
     stage: deploy
     script:
-        - asciidoctor -o index.html -D public documentation.adoc
+        - asciidoctor -o index.html -D public ./README.adoc
     only:
         - master
     artifacts:
