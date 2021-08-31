@@ -45,31 +45,9 @@ class Card
     $this->name = $name;
   }
 
-  /** définir une relation d'ordre entre instance de Card.
-   *  Remarque : cette méthode n'est pas de portée d'instance
-   *
-   * @see https://www.php.net/manual/fr/function.usort.php
-   *
-   * @param $o1 Card
-   * @param $o2 Card
-   * @return int
-   * <ul>
-   *  <li> zéro si $o1 et $o2 sont considérés comme égaux </li>
-   *  <li> -1 si $o1 est considéré inférieur à $o2</li>
-    * <li> +1 si $o1 est considéré supérieur à $o2</li>
-   * </ul>
-   *
-   */
-  public static function cmp(Card $o1, Card $o2) : int
+  public function getColor() : string
   {
-    // TODO il faudra prendre aussi en compte la couleur !
-
-    $o1Name = strtolower($o1->name);
-    $o2Name = strtolower($o2->name);
-    if ($o1Name == $o2Name) {
-      return 0;
-    }
-    return ($o1Name > $o2Name) ? +1 : -1;
+    return $this->color;
   }
 
 
