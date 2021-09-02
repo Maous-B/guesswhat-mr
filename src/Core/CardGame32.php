@@ -8,13 +8,6 @@ namespace App\Core;
  */
 class CardGame32
 {
-
-  const ORDER_COLORS = ['coeur' => 4, 'carreau' => 3, 'pique' => 2, 'trèfle' => 1 ];
-  const ORDER_NAMES = [
-    '2' => 2, '3' => 3, '4' => 4, '5' => 5, '6' => 6,
-    '7' => 7, '8' => 8, '9' => 9, '10' => 10,
-    'valet' => 11, 'reine' => 12, 'roi' => 13, 'as' => 14 ];
-
   /**
    * @var $cards array a array of Cards
    */
@@ -38,7 +31,6 @@ class CardGame32
   }
 
   // TODO ajouter une méthode reOrder qui remet le paquet en ordre
-
 
   /** définir une relation d'ordre entre instance de Card.
    * à valeur égale (name) c'est l'ordre de la couleur qui prime
@@ -73,7 +65,7 @@ class CardGame32
     return ($c1Name > $c2Name) ? +1 : -1;
   }
 
-
+ // TODO manque PHPDoc
   public static function factoryCardGame32() : CardGame32 {
      // TODO création d'un jeu de 32 cartes
     $cardGame = new CardGame32([new Card('As', 'Trèfle'), new Card('2', 'Trèfle')]);
@@ -81,7 +73,9 @@ class CardGame32
     return $cardGame;
   }
 
+  // TODO manque PHPDoc
   public function getCard($index) : Card {
+    // TODO naïf
     return  $this->cards[$index];
   }
 

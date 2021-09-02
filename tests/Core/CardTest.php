@@ -26,32 +26,6 @@ class CardTest extends TestCase
     $this->assertEquals('Pique', $card->getColor());
   }
 
-  // hors contexte... pour comprendre la logique booléenne de PHP
-  public function testBoolStringEmpty()  {
-    $this->assertTrue("" == false);
-  }
-
-  public function testBoolStrictStringEmpty()  {
-    $this->assertFalse("" === false);
-  }
-
-  public function testBoolStringZero()  {
-    $this->assertTrue("0" == false);
-  }
-
-  public function testBoolStringSpace()  {
-    $this->assertFalse(" " == false);
-  }
-
-  public function testBoolStringZeroFloat()  {
-    $this->assertFalse("00" == false);
-  }
-
-  public function testBoolStrict()  {
-    $this->assertFalse("0" === false);
-  }
-
-
   public function testCompareSameCard()
   {
     $card1 = new Card('As', 'Trèfle');

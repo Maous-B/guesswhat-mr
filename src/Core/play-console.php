@@ -8,7 +8,7 @@ $cardGame = App\Core\CardGame32::factoryCardGame32();
 echo " ==== Instanciation du jeu, début de la partie. ==== \n";
 $game =  new App\Core\Guess($cardGame, $cardGame->getCard(0), false);
 
-$userCardIndex = readline("Entrez une position de carte dans le jeu :");
+$userCardIndex = readline("Entrez une position de carte dans le jeu : ");
 
 // code naïf, car aucun contrôle de validité de $userCardIndex...
 $userCard = $cardGame->getCard($userCardIndex);

@@ -1,4 +1,4 @@
-= Guess What
+# Guess What
 
 Prise en main de la POO avec PHP
 
@@ -6,13 +6,13 @@ Niveau : Deuxième année de BTS SIO SLAM
 
 Prérequis : bases de la programmation, PHP 7 ou supérieur installé sur votre machine de dev.
 
-== Thème 
+## Thème 
 
 Développer une logique de jeu en PHP en mettant en oeuvre de la conception objet et des tests unitaires.
 
 Jeu en mode console. Un début d'implémentation est proposé (`play-console.php` à lancer dans une console)
 
-TIP:  Ce projet est un bon candidat à une application web avec symfony, éligible comme activité professionnelle si prise en compte des scores des joueurs dans une base de données.
+:information_source: Ce projet est un bon candidat à une application web avec symfony, éligible comme activité professionnelle si prise en compte des scores des joueurs dans une base de données.
 
 Les étapes d'un scénario typique d'usage sont 
 
@@ -23,16 +23,15 @@ Les étapes d'un scénario typique d'usage sont
 5. (c'est la bonne carte alors) La partie se termine et le jeu affiche des éléments d'analyse (nombre de fois où le joueur a soumis une carte, sa *qualité stratégique*, ...)
 6. Fin de la partie.
 
-== Objectif
+## Objectif
 
 * Conception et mise au point de la logique applicative avec PHPUnit
 * Structure de données, recherche d'un élément dans une liste
 * Analyse des actions du joueur (fonction du nombre de cartes, aides à la décision)  
 
-== Premiers éléments d'analyse
+## Premiers éléments d'analyse
 
-[plantuml]
-----
+```plantuml
 class Guess {
   withHelp : boolean
 
@@ -56,7 +55,7 @@ Guess"*" -> "\nselectedCard  1  " Card : "                             "
 Guess"*" -> "cardGame 1  " CardGame32 : "                                     "
 CardGame32 "*" --> "   * cards  " Card : "                                     "
 hide circle
-----
+```
 
 Cette analyse est une première ébauche, donc incomplète et à ajuster, mais suffisante pour réaliser vos premiers pas sur ce projet. Qu'est-ce qu'elle nous dit ?
 
@@ -71,12 +70,11 @@ Pour l'essentiel (le cours associé apportera d'autres informations et répondra
 
 Une instance de `Guess` est reliée, à un instant _t_, à un jeu de cartes, lui-même reliè à un ensemble de cartes  (`cards`), et à une instance de `Card` (`selectedCard` est la carte que le joueur doit deviner)
 
-== Première implémentation
+## Première implémentation
 
 Classe `Card` (extrait. Localisation : `src/Core/Card.php`)
 
-[, php]
-----
+```php
 <?php
 namespace App\Core;
 
@@ -106,13 +104,11 @@ class Card
 
   // [...]
 }
-----
-
+```
 
 Classe `Guess` (incomplète. Localisation : `src/Core/Guess.php`)
 
-[, php]
-----
+```php
 <?php
 
 namespace App\Core;
@@ -138,20 +134,21 @@ class Guess
    */
   private $withHelp;
 }
-----
+```
 
-NOTE: L'usage de la syntaxe de documentation PHPDoc https://docs.phpdoc.org/3.0/guide/getting-started/what-is-a-docblock.html[DocBloc] est attendue dans votre code !
+:warning: L'usage de la syntaxe de documentation PHPDoc 
+[DocBloc](https://docs.phpdoc.org/3.0/guide/getting-started/what-is-a-docblock.html) est attendue dans votre code !
 
-== TP1 de prise en main (4h à 8h)
+## TP1 de prise en main (4h à 8h)
 
-=== Vérifier les prérequis de votre système
+### Vérifier les prérequis de votre système
 
 * `php cli`  doit être opérationnel. (en ligne de commande tester : `php -version`)
 * `composer` doit être opérationnel. (en ligne de commande tester : `composer -V`)
 
-=== Télécharger le projet de démarrage
+### Télécharger le projet de démarrage
 
-TIP: Conseil : utiliser l'instruction `git clone` ou encore mieux, si vous êtes connecté à GiltLab avec votre compte,
+:information_source: Conseil : utiliser l'instruction `git clone` ou encore mieux, si vous êtes connecté à GiltLab avec votre compte,
 faire directement, en ligne, un `fork` de ce projet ; vous pourrez ainsi directement cloner, sur votre machine de dev,
 votre nouveau projet (et réaliser des `commit` et `push` de votre travail).
 
@@ -162,19 +159,19 @@ Une fois cloné, **aller à la racine du projet** puis lancer les commandes suiv
 * `./bin/phpunit --version` (le premier lancement de cette commande provoquera l'installation du plugin `phpunit`, puis lancera les tests.
   Le résultat devrait être, à un numéro de version prêt : `PHPUnit 7.5.20 by Sebastian Bergmann and contributors.` )
 
-TIP: Sous windows la commande est `php .\bin\phpunit --version` (remarquez l'usage de `\` au lieu de `/` )
+:information_source: Sous windows la commande est `php .\bin\phpunit --version` (remarquez l'usage de `\` au lieu de `/` )
 
-NOTE: À ce niveau là, ne vous préoccupez pas de l'écosystème Symfony, il serait étudié très bientôt.
+:information_source: À ce niveau là, ne vous préoccupez pas de l'écosystème Symfony, il serait étudié très bientôt.
 
-=== Tester le bon fonctionnement de ce petit existant
+### Tester le bon fonctionnement de ce petit existant
 
-==== Lancement des tests unitaires
+#### Lancement des tests unitaires
   
 À **la racine du projet** du projet, lancer la commande : `./bin/phpunit`
 
 Le système lance alors l'exécution des tests unitaires du dossier `tests` du projet. 8 tests sont exécutés (100 % sans bug), dont 4 en échec (`FAILURE`) :
 
-----
+```
 [racine du projet]$ ./bin/phpunit
 
 Testing Project Test Suite
@@ -206,7 +203,7 @@ guesswhat/tests/Core/CardTest.php:84
 
 FAILURES!
 Tests: 8, Assertions: 10, Failures: 4.
-----
+```
 
 Cette commande à lancer 8 tests unitaires (8 fonctions) situés dans le dossier `tests`. Les tests vérifient le comportement de certains objets du projet (instances des classes `CardTest` et `GuessTest`)
 
@@ -214,10 +211,10 @@ Avant d'aller plus loin, vous devez étudier le concept de _test unitaire_ et pr
 
 Ressources à étudier :
 
-* https://openclassrooms.com/fr/courses/4087056-testez-et-suivez-letat-de-votre-application-php/4419446-premiers-pas-avec-phpunit-et-les-tests-unitaires[Sur openclassrooms : premiers-pas-avec-phpunit-et-les-tests-unitaires] **à étudier - chez vous et/ou lors des séances de TP** - n'hésitez pas à noter vos questions, nous y répondrons en cours.
-* https://phpunit.readthedocs.io/fr/latest/[Documentation de PHPUnit en français]
+* Sur openclassrooms : [premiers-pas-avec-phpunit-et-les-tests-unitaires](https://openclassrooms.com/fr/courses/4087056-testez-et-suivez-letat-de-votre-application-php/4419446-premiers-pas-avec-phpunit-et-les-tests-unitaires) **à étudier - chez vous et/ou lors des séances de TP** - n'hésitez pas à noter vos questions, nous y répondrons en cours.
+* [Documentation de PHPUnit en français](https://phpunit.readthedocs.io/fr/latest/)
 
-== TP2 implémentation des TODOs de `CardTest` (~2H)
+## TP2 implémentation des TODOs de `CardTest` (~2H)
 
 Bravo, si vous en êtes là, c'est que :
 
@@ -226,7 +223,7 @@ Bravo, si vous en êtes là, c'est que :
 
 Vous allez maintenant avoir besoin d'un éditeur de code source qui vous permette de passer en mode projet.
 
-TIP: une *erreur de débutant* consiste à ouvrir un fichier à la fois à partir de son éditeur de code (IDE) au lieu d'ouvrir le dossier du projet.
+:information_source: une *erreur de débutant* consiste à ouvrir un fichier à la fois à partir de son éditeur de code (IDE) au lieu d'ouvrir le dossier du projet.
  
 Nous vous invitons à utiliser **PHPStorm** (un IDE très puissant en terme de conseils et de génération automatique de code).
  
@@ -234,15 +231,14 @@ Ouvrir le projet via `File | Open`, puis sélectionner le **dossier racine** de 
 
 Dans la fenêtre `Termnal` en bas, vous devriez pouvoir lancer la commande `./bin/phpunit` et obtenir ceci :
 
-image::doc/guesswhat-phpstorm.png[analyse uml]
+![analyse uml](doc/guesswhat-phpstorm.png)
 
 Le message `There were 4 failures` nous informe que 4 tests ont échoués.
 **Ceci est votre premier challenge !**
 
 Voici un extrait de la classe de test :
 
-[, php]
-----
+```php
 <?php
 
 namespace App\Tests\Core; <1>
@@ -258,12 +254,15 @@ class CardTest extends TestCase <2>
     $card = new Card('As', 'Trèfle');  <4>
     $this->assertEquals('As', $card->getName()); <5>
   }
-
-----
+```
 <1> Les classes de test sont placées, par convention, sur une arborescence `tests` (ou `test`) parallèle à `src`
+
 <2> Cette classe de test hérite de `TestCase` (du framework `PHPUnit`)
+
 <3> Attention, les méthodes de test commencent par le préfix _test_
+
 <4> Création d'une instance de `Card` (As de trèfle)
+
 <5> C'est ici que le test a lieu. `$this->assertEquals` (méthode héritée) permet de comparer
 une *valeur attendue* (premier argument) avec une *valeur obtenue* par l'appel à la méthode `getName` de l'instance
 précédemment créée (second argument). Le résultat dégagé suite à l'appel de `$this->assertEquals` est géré par `PHPUnit`
@@ -274,9 +273,9 @@ Le travail à faire a été signalé dans le code source par des commentaires `T
 
  
 WARNING: Attention : la méthode toString fait partie des méthodes dites "_magiques_" en PHP. À ce sujet vous consulterez
-cette documentation https://www.php.net/manual/fr/language.oop5.magic.php#object.tostring[methode "magique" toString]
+cette documentation [methode "magique" toString](https://www.php.net/manual/fr/language.oop5.magic.php#object.tostring)
 
-== TP3 conception de tests unitaires pour `CardGame32` (~4H à 8h)
+## TP3 conception de tests unitaires pour `CardGame32` (~4H à 8h)
 À ce niveau là, vous avez acquis une certaine autonomie sur le projet et intégré les concepts de base de la notion de tests unitaires. C'est ce que nous allons vérifier.
 
 Comme son nom l'indique, la classe `CardGame32` représente un jeu de 32 cartes.
@@ -289,10 +288,10 @@ Travail à faire :
 * Poursuivez la conception de la classe `CardGame32` : les TODO et au delà.
 
 
-TIP: Pour consulter la liste des TODOs, ouvrir la fenêtre TODO tool: `View | Tool Windows | TODO`.
+:information_source: Pour consulter la liste des TODOs, ouvrir la fenêtre TODO tool: `View | Tool Windows | TODO`.
 
 
-== TP4 conception de tests unitaires pour `Guess` (~4h à 8h)
+## TP4 conception de tests unitaires pour `Guess` (~4h à 8h)
 
 Votre mission consiste à concevoir une classe de tests qui teste la logique du jeu (représentée par la classe `Guess`).
 Ce travail est à réaliser en binôme. Il y aura des décisions à prendre, qui pourront être discutées collectivement, entre différents binômes.
@@ -311,16 +310,14 @@ L'analyse de la stratégie du joueur, lorsqu'il termine une partie, devra prendr
 
 L'analyse de la stratégie du joueur peut être représentée sous la forme d'un texte (une chaine de caractères). C'est à vous de décider de son contenu (sa valeur).
 
-TIP: Le travail demandé ne nécessite pas une interaction avec un utilisateur (un joueur), car tout se passe donc dans les classes de tests ! Vous pouvez cependant jouer avec votre programme en lançant, dans la console, la commande `php play-console.php` (se placer pour cela dans le dossier `src/Core`)
+:information_source: Le travail demandé ne nécessite pas une interaction avec un utilisateur (un joueur), car tout se passe donc dans les classes de tests ! Vous pouvez cependant jouer avec votre programme en lançant, dans la console, la commande `php play-console.php` (se placer pour cela dans le dossier `src/Core`)
 
-== Livraison
+## Livraison
 
-Modalité de livraison (mode « binôme ») : dépôt sur GitLab avec un *README.adoc* ou Github avec un *README.md*. Ce document présentera le travail que vous avez réalisé (TP1 à 4), ce sera votre *rapport de projet*. Il inclura un lien vers le dépôt initial _guesswhat_ (celui-ci) et un vers votre propre dépôt.
+Modalité de livraison (mode « binôme ») : dépôt sur GitLab avec un *README.adoc* ou Github avec un *README.md*. Ce document présentera le travail que vous avez réalisé (TP1 à 4), ce sera votre *rapport de projet*. Il incluera un lien vers le dépôt initial _guesswhat_ (celui-ci) et un vers votre propre dépôt.
 
-Ressource utile : https://docs.gitlab.com/ee/user/asciidoc.html[courte documentation asciidoc sur GitLab]
+Ressource utile : faire une recherche avec `github flavored markdown`
 
 La deadline vous sera communiquée en milieu de semaine.
-
-TIP: sous PhpStorm, vous pouvez extraire une version *PDF* de votre REAMDE.adoc : `View|Appearence|Enter Presentation Mode` (c'est un mode `WYSIWYG`), le menu du haut dispose d'une commande d'export PDF : pour quitter ce mode, activer le menu en haut en déplaçant le curseur de la souris vers le haut de l'écran et choisir `Exit Presentation Mode` (quitte le plein écran).
 
 Bonne analyse et programmation !
