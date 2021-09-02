@@ -317,7 +317,7 @@ TIP: Le travail demandé ne nécessite pas une interaction avec un utilisateur (
 
 Modalité de livraison (mode « binôme ») : dépôt sur GitLab avec un *README.adoc* ou Github avec un *README.md*. Ce document présentera le travail que vous avez réalisé (TP1 à 4), ce sera votre *rapport de projet*. Il inclura un lien vers le dépôt initial _guesswhat_ (celui-ci) et un vers votre propre dépôt.
 
-Ressource utile : https://docs.gitlab.com/ee/user/asciidoc.html[courte documentation asciidoc sur GitLab]
+Ressources utiles : https://docs.gitlab.com/ee/user/asciidoc.html[courte documentation asciidoc sur GitLab], pour Github https://guides.github.com/features/mastering-markdown/
 
 La deadline vous sera communiquée en milieu de semaine.
 
