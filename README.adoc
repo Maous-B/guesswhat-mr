@@ -142,7 +142,7 @@ class Guess
 
 NOTE: L'usage de la syntaxe de documentation PHPDoc https://docs.phpdoc.org/3.0/guide/getting-started/what-is-a-docblock.html[DocBloc] est attendue dans votre code !
 
-== TP1 de prise en main (4h à 8h)
+== Challenge-1 : Prise en main (4h à 8h)
 
 === Vérifier les prérequis de votre système
 
@@ -217,7 +217,7 @@ Ressources à étudier :
 * https://openclassrooms.com/fr/courses/4087056-testez-et-suivez-letat-de-votre-application-php/4419446-premiers-pas-avec-phpunit-et-les-tests-unitaires[Sur openclassrooms : premiers-pas-avec-phpunit-et-les-tests-unitaires] **à étudier - chez vous et/ou lors des séances de TP** - n'hésitez pas à noter vos questions, nous y répondrons en cours.
 * https://phpunit.readthedocs.io/fr/latest/[Documentation de PHPUnit en français]
 
-== TP2 implémentation des TODOs de `CardTest` (~2H)
+== Challenge-2 : Implémentation des TODOs de `CardTest` (~2H)
 
 Bravo, si vous en êtes là, c'est que :
 
@@ -276,7 +276,7 @@ Le travail à faire a été signalé dans le code source par des commentaires `T
 WARNING: Attention : la méthode toString fait partie des méthodes dites "_magiques_" en PHP. À ce sujet vous consulterez
 cette documentation https://www.php.net/manual/fr/language.oop5.magic.php#object.tostring[methode "magique" toString]
 
-== TP3 conception de tests unitaires pour `CardGame32` (~4H à 8h)
+== Challenge-3 : Conception de tests unitaires pour `CardGame32` (~4H à 8h)
 À ce niveau là, vous avez acquis une certaine autonomie sur le projet et intégré les concepts de base de la notion de tests unitaires. C'est ce que nous allons vérifier.
 
 Comme son nom l'indique, la classe `CardGame32` représente un jeu de 32 cartes.
@@ -292,7 +292,7 @@ Travail à faire :
 TIP: Pour consulter la liste des TODOs, ouvrir la fenêtre TODO tool: `View | Tool Windows | TODO`.
 
 
-== TP4 conception de tests unitaires pour `Guess` (~4h à 8h)
+== Challenge-4 : Conception de tests unitaires pour `Guess` (~4h à 8h)
 
 Votre mission consiste à concevoir une classe de tests qui teste la logique du jeu (représentée par la classe `Guess`).
 Ce travail est à réaliser en binôme. Il y aura des décisions à prendre, qui pourront être discutées collectivement, entre différents binômes.
@@ -321,6 +321,6 @@ Ressources utiles : https://docs.gitlab.com/ee/user/asciidoc.html[courte docume
 
 La deadline vous sera communiquée en milieu de semaine.
 
-TIP: sous PhpStorm, vous pouvez extraire une version *PDF* de votre REAMDE.adoc : `View|Appearence|Enter Presentation Mode` (c'est un mode `WYSIWYG`), le menu du haut dispose d'une commande d'export PDF : pour quitter ce mode, activer le menu en haut en déplaçant le curseur de la souris vers le haut de l'écran et choisir `Exit Presentation Mode` (quitte le plein écran).
+TIP: sous PhpStorm, vous pouvez extraire une version *PDF* de votre REAMDE.adoc (fonction dans la barre de menu d'édition du .adoc).
 
 Bonne analyse et programmation !
