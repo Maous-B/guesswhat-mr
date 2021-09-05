@@ -295,7 +295,7 @@ TIP: Pour consulter la liste des TODOs, ouvrir la fenêtre TODO tool: `View | To
 == Challenge-4 : Conception de tests unitaires pour `Guess` (~4h à 8h)
 
 Votre mission consiste à concevoir une classe de tests qui teste la logique du jeu (représentée par la classe `Guess`).
-Ce travail est à réaliser en binôme. Il y aura des décisions à prendre, qui pourront être discutées collectivement, entre différents binômes.
+Ce travail est à réaliser en binôme. Il y aura également des décisions à prendre, qui pourront être discutées collectivement, entre différents binômes.
 
 Voici quelques éléments à prendre en compte dans votre analyse.
 
@@ -321,6 +321,10 @@ Ressources utiles : https://docs.gitlab.com/ee/user/asciidoc.html[courte docume
 
 La deadline vous sera communiquée en milieu de semaine.
 
+////
 TIP: sous PhpStorm, vous pouvez extraire une version *PDF* de votre REAMDE.adoc (fonction dans la barre de menu d'édition du .adoc).
+////
+
+TIP: Pour le travail en binôme, sous PhpStorm, voir le concept (et outil) de _code with me_
 
 Bonne analyse et programmation !
