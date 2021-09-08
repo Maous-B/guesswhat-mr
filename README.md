@@ -139,7 +139,7 @@ class Guess
 :warning: L'usage de la syntaxe de documentation PHPDoc 
 [DocBloc](https://docs.phpdoc.org/3.0/guide/getting-started/what-is-a-docblock.html) est attendue dans votre code !
 
-## TP1 de prise en main (4h à 8h)
+## Challenge 1 de prise en main (4h à 8h)
 
 ### Vérifier les prérequis de votre système
 
@@ -214,7 +214,7 @@ Ressources à étudier :
 * Sur openclassrooms : [premiers-pas-avec-phpunit-et-les-tests-unitaires](https://openclassrooms.com/fr/courses/4087056-testez-et-suivez-letat-de-votre-application-php/4419446-premiers-pas-avec-phpunit-et-les-tests-unitaires) **à étudier - chez vous et/ou lors des séances de TP** - n'hésitez pas à noter vos questions, nous y répondrons en cours.
 * [Documentation de PHPUnit en français](https://phpunit.readthedocs.io/fr/latest/)
 
-## TP2 implémentation des TODOs de `CardTest` (~2H)
+## Challenge 2 implémentation des TODOs de `CardTest` (~2H)
 
 Bravo, si vous en êtes là, c'est que :
 
@@ -275,7 +275,7 @@ Le travail à faire a été signalé dans le code source par des commentaires `T
 WARNING: Attention : la méthode toString fait partie des méthodes dites "_magiques_" en PHP. À ce sujet vous consulterez
 cette documentation [methode "magique" toString](https://www.php.net/manual/fr/language.oop5.magic.php#object.tostring)
 
-## TP3 conception de tests unitaires pour `CardGame32` (~4H à 8h)
+## Challenge 3 conception de tests unitaires pour `CardGame32` (~4H à 8h)
 À ce niveau là, vous avez acquis une certaine autonomie sur le projet et intégré les concepts de base de la notion de tests unitaires. C'est ce que nous allons vérifier.
 
 Comme son nom l'indique, la classe `CardGame32` représente un jeu de 32 cartes.
@@ -291,7 +291,7 @@ Travail à faire :
 :information_source: Pour consulter la liste des TODOs, ouvrir la fenêtre TODO tool: `View | Tool Windows | TODO`.
 
 
-## TP4 conception de tests unitaires pour `Guess` (~4h à 8h)
+## Challenge 4 conception de tests unitaires pour `Guess` (~4h à 8h)
 
 Votre mission consiste à concevoir une classe de tests qui teste la logique du jeu (représentée par la classe `Guess`).
 Ce travail est à réaliser en binôme. Il y aura des décisions à prendre, qui pourront être discutées collectivement, entre différents binômes.
@@ -314,10 +314,19 @@ L'analyse de la stratégie du joueur peut être représentée sous la forme d'un
 
 ## Livraison
 
-Modalité de livraison (mode « binôme ») : dépôt sur GitLab avec un *README.adoc* ou Github avec un *README.md*. Ce document présentera le travail que vous avez réalisé (TP1 à 4), ce sera votre *rapport de projet*. Il incluera un lien vers le dépôt initial _guesswhat_ (celui-ci) et un vers votre propre dépôt.
 
-Ressource utile : faire une recherche avec `github flavored markdown`
+* Dépôt de votre projet sur GitLab avec un *README.adoc* ou Github avec un *README.md*. Ce document présentera le travail que vous avez réalisé (Challenge 1 à 4), ce sera votre *rapport de projet*. Il inclura un lien vers le dépôt initial _guesswhat_ (celui-ci) et un vers votre propre dépôt.
+* Livraison par mail d'une version *pdf* de votre README au plus tard **mardi 14 septembre 2021 23h59**.
 
-La deadline vous sera communiquée en milieu de semaine.
+Ressources utiles :
+
+* Gitlab et AsciiDoc: https://docs.gitlab.com/ee/user/asciidoc.html[courte documentation asciidoc sur GitLab]
+* Github et MarkDown https://guides.github.com/features/mastering-markdown/
+
+TIP: sous PhpStorm, vous pouvez extraire une version *PDF* de votre REAMDE.adoc (fonction dans la barre de menu d'édition du .adoc).
+
+TIP: Pour le travail en binôme, sous PhpStorm, voir le concept (et outil)  _code with me_
+
+NOTE: n'hésitez pas à consulter le code source de ce README.adoc et sa version .md.
 
 Bonne analyse et programmation !

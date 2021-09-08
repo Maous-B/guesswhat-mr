@@ -315,16 +315,20 @@ TIP: Le travail demandé ne nécessite pas une interaction avec un utilisateur (
 
 == Livraison
 
-Modalité de livraison (mode « binôme ») : dépôt sur GitLab avec un *README.adoc* ou Github avec un *README.md*. Ce document présentera le travail que vous avez réalisé (TP1 à 4), ce sera votre *rapport de projet*. Il inclura un lien vers le dépôt initial _guesswhat_ (celui-ci) et un vers votre propre dépôt.
+Modalité de livraison (mode « binôme ») :
 
-Ressources utiles : https://docs.gitlab.com/ee/user/asciidoc.html[courte documentation asciidoc sur GitLab], pour Github https://guides.github.com/features/mastering-markdown/
+* Dépôt de votre projet sur GitLab avec un *README.adoc* ou Github avec un *README.md*. Ce document présentera le travail que vous avez réalisé (Challenge 1 à 4), ce sera votre *rapport de projet*. Il inclura un lien vers le dépôt initial _guesswhat_ (celui-ci) et un vers votre propre dépôt.
+* Livraison par mail d'une version *pdf* de votre README au plus tard *mardi 14 septembre 2021 23h59*.
 
-La deadline vous sera communiquée en milieu de semaine.
+Ressources utiles :
 
-////
+* Gitlab et AsciiDoc: https://docs.gitlab.com/ee/user/asciidoc.html[courte documentation asciidoc sur GitLab]
+* Github et MarkDown https://guides.github.com/features/mastering-markdown/
+
 TIP: sous PhpStorm, vous pouvez extraire une version *PDF* de votre REAMDE.adoc (fonction dans la barre de menu d'édition du .adoc).
-////
 
-TIP: Pour le travail en binôme, sous PhpStorm, voir le concept (et outil) de _code with me_
+TIP: Pour le travail en binôme, sous PhpStorm, voir le concept (et outil)  _code with me_
+
+NOTE: n'hésitez pas à consulter le code source de ce README.adoc et sa version .md.
 
 Bonne analyse et programmation !
