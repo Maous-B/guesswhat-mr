@@ -276,6 +276,19 @@ Le travail à faire a été signalé dans le code source par des commentaires `T
 WARNING: Attention : la méthode toString fait partie des méthodes dites "_magiques_" en PHP. À ce sujet vous consulterez
 cette documentation https://www.php.net/manual/fr/language.oop5.magic.php#object.tostring[methode "magique" toString]
 
+
+[TIP]
+====
+Pour n'exécuter qu'une méthode de test, d'une classe de test donnée, utiliser le paramètre _filter_ en argument de _phpunit_. Exemple (dans la console, à la racine de l'application) : +
+`./bin/phpunit tests/Core/CardTest.php --filter testCompareSameCard`
+
+`Testing App\Tests\Core\CardTest 1/1 (100%)`
+
+`Time: 47 ms, Memory: 6.00 MB`
+
+`OK (1 test, 1 assertion)`
+====
+
 == Challenge-3 : Conception de tests unitaires pour `CardGame32` (~4H à 8h)
 À ce niveau là, vous avez acquis une certaine autonomie sur le projet et intégré les concepts de base de la notion de tests unitaires. C'est ce que nous allons vérifier.
 
