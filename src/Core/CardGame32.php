@@ -8,6 +8,8 @@ namespace App\Core;
  */
 class CardGame32
 {
+
+   const ORDER_COLORS=['trefle'=> 4, 'coeur'=>3, 'pique'=>2, 'carreau'=>1];
   /**
    * @var $cards array a array of Cards
    */
@@ -62,13 +64,14 @@ class CardGame32
     if ($c1Name === $c2Name) {
         return 0;
     }
+
     return ($c1Name > $c2Name) ? +1 : -1;
   }
 
  // TODO manque PHPDoc
   public static function factoryCardGame32() : CardGame32 {
      // TODO création d'un jeu de 32 cartes
-    $cardGame = new CardGame32([new Card('As', 'Trèfle'), new Card('2', 'Trèfle')]);
+    $cardGame = new CardGame32([new Card('As', 'Trèfle'), new Card('7', 'Trèfle')]);
 
     return $cardGame;
   }
