@@ -189,12 +189,12 @@ not implemented !
 
 guesswhat/tests/Core/CardTest.php:65
 
-2) App\Tests\Core\CardTest::testCompareNoSameCardNoSameColor
+2) App\Tests\Core\CardTest::testCompareNoSameNameSameColor
 not implemented !
 
 guesswhat/tests/Core/CardTest.php:71
 
-3) App\Tests\Core\CardTest::testCompareNoSameCardSameColor
+3) App\Tests\Core\CardTest::testCompareNoSameNameNoSameColor
 not implemented !
 
 guesswhat/tests/Core/CardTest.php:77
