@@ -39,17 +39,18 @@ class CardTest extends TestCase
     $this->fail("not implemented !");
   }
 
-  public function testCompareNoSameCardNoSameColor()
-  {
-    // TODO
-    $this->fail("not implemented !");
-  }
-
   public function testCompareNoSameCardSameColor()
   {
     // TODO
     $this->fail("not implemented !");
   }
+
+  public function testCompareNoSameNameNoSameColor()
+  {
+    // TODO
+    $this->fail("not implemented !");
+  }
+
 
 
   public function testToString()
