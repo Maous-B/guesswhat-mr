@@ -279,7 +279,7 @@ cette documentation https://www.php.net/manual/fr/language.oop5.magic.php#object
 
 [TIP]
 ====
-Pour n'exécuter qu'une méthode de test, d'une classe de test donnée, utiliser le paramètre _filter_ en argument de _phpunit_. Exemple (dans la console, à la racine de l'application) : +
+Pour n'exécuter qu'*une seule méthode de test*, d'une classe de test donnée, utiliser le paramètre _filter_ en argument de _phpunit_. Exemple (dans la console, à la racine de l'application) : +
 `./bin/phpunit tests/Core/CardTest.php --filter testCompareSameCard`
 
 `Testing App\Tests\Core\CardTest 1/1 (100%)`
