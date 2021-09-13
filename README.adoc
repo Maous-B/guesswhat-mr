@@ -273,7 +273,7 @@ dans le terminal)
 Le travail à faire a été signalé dans le code source par des commentaires `TODO` (une pratique courante dans le métier).
 
  
-WARNING: Attention : la méthode toString fait partie des méthodes dites "_magiques_" en PHP. À ce sujet vous consulterez
+WARNING: Attention : la méthode toString fait partie des méthodes dites "_magiques_" en PHP (commence par *deux* _underscores_). À ce sujet vous consulterez
 cette documentation https://www.php.net/manual/fr/language.oop5.magic.php#object.tostring[methode "magique" toString]
 
 
@@ -288,6 +288,8 @@ Pour n'exécuter qu'une méthode de test, d'une classe de test donnée, utiliser
 
 `OK (1 test, 1 assertion)`
 ====
+
+TIP: Comment consulter l'état d'une variable (simple debug) lors de la mise au point d'un test unitaire avec PHPUnit ? voir : https://stackoverflow.com/questions/8070354/phpunit-dumping-variables
 
 == Challenge-3 : Conception de tests unitaires pour `CardGame32` (~4H à 8h)
 À ce niveau là, vous avez acquis une certaine autonomie sur le projet et intégré les concepts de base de la notion de tests unitaires. C'est ce que nous allons vérifier.
