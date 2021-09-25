@@ -9,7 +9,7 @@ namespace App\Core;
 class Guess
 {
   /**
-   * @var CardGame32 un jeu de cartes
+   * @var CardGame un jeu de cartes
    */
   private $cardGame;
 
@@ -25,11 +25,11 @@ class Guess
 
   /**
    * Guess constructor.
-   * @param CardGame32 $cardGame
+   * @param CardGame $cardGame
    * @param Card $selectedCard
    * @param bool $withHelp
    */
-  public function __construct(CardGame32 $cardGame, $selectedCard = null, bool $withHelp = true)
+  public function __construct(CardGame $cardGame, $selectedCard = null, bool $withHelp = true)
   {
     // TODO si $cardGame est null, affecter alors un jeu de 32 par défaut
     $this->cardGame = $cardGame;
@@ -54,7 +54,7 @@ class Guess
    */
   public function isMatch(Card $card)
   {
-    return CardGame32::compare($card, $this->selectedCard) === 0;
+    return CardGame::compare($card, $this->selectedCard) === 0;
   }
 
 }

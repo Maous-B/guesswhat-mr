@@ -3,7 +3,7 @@
 require '../../vendor/autoload.php';
 
 echo "*** Création d'un jeu de 32 cartes.***\n";
-$cardGame = App\Core\CardGame32::factoryCardGame32();
+$cardGame = new App\Core\CardGame(App\Core\CardGame::factory32Cards());
 
 echo " ==== Instanciation du jeu, début de la partie. ==== \n";
 $game =  new App\Core\Guess($cardGame, $cardGame->getCard(0), false);

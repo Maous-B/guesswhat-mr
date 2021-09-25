@@ -2,7 +2,7 @@
 
 namespace App\Tests\Core;
 
-use App\Core\CardGame32;
+use App\Core\CardGame;
 use PHPUnit\Framework\TestCase;
 use App\Core\Card;
 
@@ -30,7 +30,7 @@ class CardTest extends TestCase
   {
     $card1 = new Card('As', 'Trèfle');
     $card2 = new Card('As', 'Trèfle');
-    $this->assertEquals(0, CardGame32::compare($card1,$card2));
+    $this->assertEquals(0, CardGame::compare($card1,$card2));
   }
 
   public function testCompareSameNameNoSameColor()
@@ -39,7 +39,7 @@ class CardTest extends TestCase
     $this->fail("not implemented !");
   }
 
-  public function testCompareNoSameCardSameColor()
+  public function testCompareNoSameNameSameColor()
   {
     // TODO
     $this->fail("not implemented !");
@@ -51,11 +51,10 @@ class CardTest extends TestCase
     $this->fail("not implemented !");
   }
 
-
-
   public function testToString()
   {
-    //TODO vérifie que la représentation textuelle d'une carte est correcte
+    // TODO vérifie que la représentation textuelle
+    // d'une carte est conforme à ce que vous attendez
     $this->fail("not implemented !");
   }
 

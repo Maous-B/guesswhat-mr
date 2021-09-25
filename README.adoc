@@ -38,10 +38,10 @@ class Guess {
 
   start()
   isMatch(c : Card) : boolean
-  getStatistic()
+  getStatistic() : string
 }
 
-class CardGame32 {
+class CardGame {
   name
   {static} compare(Card c1, Card c2) : int
 }
@@ -53,20 +53,20 @@ class Card {
 }
 
 Guess"*" -> "\nselectedCard  1  " Card : "                             "
-Guess"*" -> "cardGame 1  " CardGame32 : "                                     "
-CardGame32 "*" --> "   * cards  " Card : "                                     "
+Guess"*" -> "cardGame 1  " CardGame : "                                     "
+CardGame "*" --> "   * cards  " Card : "                                     "
 hide circle
 ----
 
 Cette analyse est une première ébauche, donc incomplète et à ajuster, mais suffisante pour réaliser vos premiers pas sur ce projet. Qu'est-ce qu'elle nous dit ?
 
-* Une instance de `Guess` est liée à une instance de `CardGame32` (un jeu de cartes) nommée `cardGame` et à une instance de `Card` nommée `selectedCard` (la carte à deviner)
-* Une instance de `CardGame32` est liée à une collection (`array`) de cartes (instances de `Card`)
+* Une instance de `Guess` est liée à une instance de `CardGame` (un jeu de cartes) nommée `cardGame` et à une instance de `Card` nommée `selectedCard` (la carte à deviner)
+* Une instance de `CardGame` est liée à une collection (`array`) de cartes (instances de `Card`)
 
 Pour l'essentiel (le cours associé apportera d'autres informations et répondra à vos questions) :
 
 * La classe `Guess` est responsable de la logique du jeu.
-* La classe `CardGame32` définit la structure d'un jeu de 32 cartes classique et ses méthodes.
+* La classe `CardGame` définit la structure d'un jeu de cartes classique (de type jeu de 32 ou 54 cartes) et ses méthodes.
 * La classe `Card` définit la structure d'une carte à jouer et ses méthodes.
 
 Une instance de `Guess` est reliée, à un instant _t_, à un jeu de cartes, lui-même reliè à un ensemble de cartes  (`cards`), et à une instance de `Card` (`selectedCard` est la carte que le joueur doit deviner)
@@ -124,7 +124,7 @@ namespace App\Core;
 class Guess
 {
   /**
-   * @var CardGame32 un jeu de cartes
+   * @var CardGame un jeu de cartes
    */
   private $cardGame;
 
@@ -291,17 +291,15 @@ Pour n'exécuter qu'*une seule méthode de test*, d'une classe de test donnée, 
 
 TIP: Comment consulter l'état d'une variable (simple debug) lors de la mise au point d'un test unitaire avec PHPUnit ? voir : https://stackoverflow.com/questions/8070354/phpunit-dumping-variables
 
-== Challenge-3 : Conception de tests unitaires pour `CardGame32` (~4H à 8h)
+== Challenge-3 : Conception de tests unitaires pour `CardGame` (~4H à 8h)
 À ce niveau là, vous avez acquis une certaine autonomie sur le projet et intégré les concepts de base de la notion de tests unitaires. C'est ce que nous allons vérifier.
-
-Comme son nom l'indique, la classe `CardGame32` représente un jeu de 32 cartes.
 
 Travail à faire :
 
 * Ajouter une nouvelle classe de test en respectant la logique de nommage utilisée dans ce projet.
 * Concevoir des méthodes de test qui testent le bon comportement des objets (méthodes d'instance) de cette classe ainsi que ses méthodes statiques (méthodes de classe)
 
-* Poursuivez la conception de la classe `CardGame32` : les TODO et au delà.
+* Poursuivez la conception de la classe `CardGame` : les TODO et au delà.
 
 
 TIP: Pour consulter la liste des TODOs, ouvrir la fenêtre TODO tool: `View | Tool Windows | TODO`.

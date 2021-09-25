@@ -120,7 +120,7 @@ namespace App\Core;
 class Guess
 {
   /**
-   * @var CardGame32 un jeu de cartes
+   * @var CardGame un jeu de cartes
    */
   private $cardGame;
 

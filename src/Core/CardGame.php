@@ -2,16 +2,22 @@
 
 namespace App\Core;
 
+use phpDocumentor\Reflection\Types\Integer;
+
 /**
- * Class CardGame32 : un jeu de cartes.
+ * Class CardGame : un jeu de cartes.
  * @package App\Core
  */
-class CardGame32
+class CardGame
 {
-
-   const ORDER_COLORS=['trefle'=> 4, 'coeur'=>3, 'pique'=>2, 'carreau'=>1];
   /**
-   * @var $cards array a array of Cards
+   * Relation d'ordre sur les couleurs
+   */
+   const ORDER_COLORS=['trefle'=> 4, 'coeur'=>3, 'pique'=>2, 'carreau'=>1];
+
+
+  /**
+   * @var $cards array of Cards
    */
   private $cards;
 
@@ -56,7 +62,7 @@ class CardGame32
    */
   public static function compare(Card $c1, Card $c2) : int
   {
-    // TODO code naïf, et de plus il faudra prendre en compte la couleur !
+    // TODO code naïf : il faudrait prendre en compte la relation d'ordre sur la couleur et le nom
 
     $c1Name = strtolower($c1->getName());
     $c2Name = strtolower($c2->getName());
@@ -68,18 +74,30 @@ class CardGame32
     return ($c1Name > $c2Name) ? +1 : -1;
   }
 
- // TODO manque PHPDoc
-  public static function factoryCardGame32() : CardGame32 {
+  /**
+   * Création automatique d'un paquet de 32 cartes
+   * (afin de simplifier son instanciation)
+   * @return array of Cards
+   */
+  public static function factory32Cards() : array {
      // TODO création d'un jeu de 32 cartes
-    $cardGame = new CardGame32([new Card('As', 'Trèfle'), new Card('7', 'Trèfle')]);
-
-    return $cardGame;
+    $cards = [new Card('As', 'Trefle'), new Card('7', 'Trefle')];
+    return $cards;
   }
 
-  // TODO manque PHPDoc
-  public function getCard($index) : Card {
-    // TODO naïf
+  // TODO manque PHPDoc avec pré-condition sur les valeurs acceptables de $index
+  public function getCard(int $index) : Card {
     return  $this->cards[$index];
+  }
+
+
+  /**
+   * @see https://www.php.net/manual/fr/language.oop5.magic.php#object.tostring
+   * @return string
+   */
+  public function __toString()
+  {
+    return 'CardGame : '.count($this->cards).' carte(s)';
   }
 
 }
