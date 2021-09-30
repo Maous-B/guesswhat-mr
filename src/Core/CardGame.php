@@ -42,7 +42,7 @@ class CardGame
 
   /** définir une relation d'ordre entre instance de Card.
    * à valeur égale (name) c'est l'ordre de la couleur qui prime
-   * coeur > carreau > pique > trèfle
+   * pique > coeur > carreau > trèfle
    * Attention : si AS de Coeur est plus fort que AS de Trèfle,
    * 2 de Coeur sera cependant plus faible que 3 de Trèfle
    *
