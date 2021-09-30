@@ -142,7 +142,7 @@ class Guess
 
 NOTE: L'usage de la syntaxe de documentation PHPDoc https://docs.phpdoc.org/3.0/guide/getting-started/what-is-a-docblock.html[DocBloc] est attendue dans votre code !
 
-== Challenge-1 : Prise en main (4h à 8h)
+== Challenge-1 : Prise en main 
 
 === Vérifier les prérequis de votre système
 
@@ -217,7 +217,7 @@ Ressources à étudier :
 * https://openclassrooms.com/fr/courses/4087056-testez-et-suivez-letat-de-votre-application-php/4419446-premiers-pas-avec-phpunit-et-les-tests-unitaires[Sur openclassrooms : premiers-pas-avec-phpunit-et-les-tests-unitaires] **à étudier - chez vous et/ou lors des séances de TP** - n'hésitez pas à noter vos questions, nous y répondrons en cours.
 * https://phpunit.readthedocs.io/fr/latest/[Documentation de PHPUnit en français]
 
-== Challenge-2 : Implémentation des TODOs de `CardTest` (~2H)
+== Challenge-2 : Implémentation des TODOs de `CardTest` 
 
 Bravo, si vous en êtes là, c'est que :
 
@@ -291,7 +291,7 @@ Pour n'exécuter qu'*une seule méthode de test*, d'une classe de test donnée, 
 
 TIP: Comment consulter l'état d'une variable (simple debug) lors de la mise au point d'un test unitaire avec PHPUnit ? voir : https://stackoverflow.com/questions/8070354/phpunit-dumping-variables
 
-== Challenge-3 : Conception de tests unitaires pour `CardGame` (~4H à 8h)
+== Challenge-3 : Conception de tests unitaires pour `CardGame` 
 À ce niveau là, vous avez acquis une certaine autonomie sur le projet et intégré les concepts de base de la notion de tests unitaires. C'est ce que nous allons vérifier.
 
 Travail à faire :
@@ -305,7 +305,7 @@ Travail à faire :
 TIP: Pour consulter la liste des TODOs, ouvrir la fenêtre TODO tool: `View | Tool Windows | TODO`.
 
 
-== Challenge-4 : Conception de tests unitaires pour `Guess` (~4h à 8h)
+== Challenge-4 : Conception de tests unitaires pour `Guess` 
 
 Votre mission consiste à concevoir une classe de tests qui teste la logique du jeu (représentée par la classe `Guess`).
 Ce travail est à réaliser en binôme. Il y aura également des décisions à prendre, qui pourront être discutées collectivement, entre différents binômes.
