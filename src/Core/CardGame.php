@@ -13,7 +13,7 @@ class CardGame
   /**
    * Relation d'ordre sur les couleurs
    */
-   const ORDER_COLORS=['trefle'=> 4, 'coeur'=>3, 'pique'=>2, 'carreau'=>1];
+   const ORDER_COLORS=['trefle'=> 1, 'carreau'=>2, 'coeur'=>3, 'pique'=>4 ];
 
 
   /**
