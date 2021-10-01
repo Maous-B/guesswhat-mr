@@ -139,7 +139,7 @@ class Guess
 :warning: L'usage de la syntaxe de documentation PHPDoc 
 [DocBloc](https://docs.phpdoc.org/3.0/guide/getting-started/what-is-a-docblock.html) est attendue dans votre code !
 
-## Challenge 1 de prise en main (4h à 8h)
+## Challenge 1 de prise en main 
 
 ### Vérifier les prérequis de votre système
 
@@ -205,7 +205,7 @@ FAILURES!
 Tests: 8, Assertions: 10, Failures: 4.
 ```
 
-Cette commande à lancer 8 tests unitaires (8 fonctions) situés dans le dossier `tests`. Les tests vérifient le comportement de certains objets du projet (instances des classes `CardTest` et `GuessTest`)
+Cette commande a lancé 8 tests unitaires (8 fonctions) situés dans le dossier `tests`. Les tests vérifient le comportement de certains objets du projet (instances des classes `CardTest` et `GuessTest`)
 
 Avant d'aller plus loin, vous devez étudier le concept de _test unitaire_ et prendre connaissance des bonnes pratiques de documentation du code.
 
@@ -214,7 +214,7 @@ Ressources à étudier :
 * Sur openclassrooms : [premiers-pas-avec-phpunit-et-les-tests-unitaires](https://openclassrooms.com/fr/courses/4087056-testez-et-suivez-letat-de-votre-application-php/4419446-premiers-pas-avec-phpunit-et-les-tests-unitaires) **à étudier - chez vous et/ou lors des séances de TP** - n'hésitez pas à noter vos questions, nous y répondrons en cours.
 * [Documentation de PHPUnit en français](https://phpunit.readthedocs.io/fr/latest/)
 
-## Challenge 2 implémentation des TODOs de `CardTest` (~2H)
+## Challenge 2 implémentation des TODOs de `CardTest` 
 
 Bravo, si vous en êtes là, c'est que :
 
@@ -275,7 +275,7 @@ Le travail à faire a été signalé dans le code source par des commentaires `T
 WARNING: Attention : la méthode toString fait partie des méthodes dites "_magiques_" en PHP. À ce sujet vous consulterez
 cette documentation [methode "magique" toString](https://www.php.net/manual/fr/language.oop5.magic.php#object.tostring)
 
-## Challenge 3 conception de tests unitaires pour `CardGame32` (~4H à 8h)
+## Challenge 3 conception de tests unitaires pour `CardGame32` 
 À ce niveau là, vous avez acquis une certaine autonomie sur le projet et intégré les concepts de base de la notion de tests unitaires. C'est ce que nous allons vérifier.
 
 Comme son nom l'indique, la classe `CardGame32` représente un jeu de 32 cartes.
@@ -291,7 +291,7 @@ Travail à faire :
 :information_source: Pour consulter la liste des TODOs, ouvrir la fenêtre TODO tool: `View | Tool Windows | TODO`.
 
 
-## Challenge 4 conception de tests unitaires pour `Guess` (~4h à 8h)
+## Challenge 4 conception de tests unitaires pour `Guess` 
 
 Votre mission consiste à concevoir une classe de tests qui teste la logique du jeu (représentée par la classe `Guess`).
 Ce travail est à réaliser en binôme. Il y aura des décisions à prendre, qui pourront être discutées collectivement, entre différents binômes.
