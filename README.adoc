@@ -159,12 +159,10 @@ Une fois cloné, **aller à la racine du projet** puis lancer les commandes suiv
 
 * `composer update`  (actualisation des dépendances)
 
-* `./bin/phpunit --version` (le premier lancement de cette commande provoquera l'installation du plugin `phpunit`, puis lancera les tests.
-  Le résultat devrait être, à un numéro de version prêt : `PHPUnit 7.5.20 by Sebastian Bergmann and contributors.` )
+* `.\vendor\bin\phpunit --version` (le premier lancement de cette commande provoquera l'installation du plugin `phpunit`, puis lancera les tests.
+  Le résultat devrait être, à un numéro de version prêt : `PHPUnit 9.6.3 by Sebastian Bergmann and contributors.` )
 
 TIP: Sous windows la commande est `php .\bin\phpunit --version` (remarquez l'usage de `\` au lieu de `/` )
-
-NOTE: À ce niveau là, ne vous préoccupez pas de l'écosystème Symfony, il serait étudié très bientôt.
 
 === Tester le bon fonctionnement de ce petit existant
 
@@ -172,7 +170,7 @@ NOTE: À ce niveau là, ne vous préoccupez pas de l'écosystème Symfony, il se
   
 À **la racine du projet** du projet, lancer la commande : `./bin/phpunit`
 
-Le système lance alors l'exécution des tests unitaires du dossier `tests` du projet. 8 tests sont exécutés (100 % sans bug), dont 4 en échec (`FAILURE`) :
+Le système lance alors l'exécution des tests unitaires du dossier `tests` du projet. 9 tests sont exécutés (100 % sans bug), dont 4 en échec (`FAILURE`) :
 
 ----
 [racine du projet]$ ./bin/phpunit
