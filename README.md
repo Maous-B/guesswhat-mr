@@ -227,7 +227,8 @@ Nous vous invitons à utiliser **PHPStorm** (un IDE très puissant en terme de c
  
 Ouvrir le projet via `File | Open`, puis sélectionner le **dossier racine** de votre application.
 
-Dans la fenêtre `Termnal` en bas, vous devriez pouvoir lancer la commande `./bin/phpunit` et obtenir ceci :
+Dans la fenêtre `Termnal` en bas, vous devriez pouvoir lancer la commande `.\vendor\bin\phpunit tests` et obtenir ceci  :
+
 
 ![analyse uml](doc/guesswhat-phpstorm.png)
 
@@ -270,7 +271,7 @@ dans le terminal)
 Le travail à faire a été signalé dans le code source par des commentaires `TODO` (une pratique courante dans le métier).
 
  
-WARNING: Attention : la méthode toString fait partie des méthodes dites "_magiques_" en PHP. À ce sujet vous consulterez
+WARNING: Attention : la méthode __toString fait partie des méthodes dites "_magiques_" en PHP. À ce sujet vous consulterez
 cette documentation [methode "magique" toString](https://www.php.net/manual/fr/language.oop5.magic.php#object.tostring)
 
 ## Challenge 3 conception de tests unitaires pour `CardGame32` 
@@ -314,16 +315,16 @@ L'analyse de la stratégie du joueur peut être représentée sous la forme d'un
 
 
 * Dépôt de votre projet sur GitLab avec un *README.adoc* ou Github avec un *README.md*. Ce document présentera le travail que vous avez réalisé (Challenge 1 à 4), ce sera votre *rapport de projet*. Il inclura un lien vers le dépôt initial _guesswhat_ (celui-ci) et un vers votre propre dépôt.
-* Livraison par mail d'une version *pdf* de votre README au plus tard **mardi 14 septembre 2021 23h59**.
+* Livraison par mail d'une version *pdf* de votre README au plus tard **1 semaine avant conseil de classe S2 SIO1**.
 
 Ressources utiles :
 
 * Gitlab et AsciiDoc: https://docs.gitlab.com/ee/user/asciidoc.html[courte documentation asciidoc sur GitLab]
 * Github et MarkDown https://guides.github.com/features/mastering-markdown/
 
-TIP: sous PhpStorm, vous pouvez extraire une version *PDF* de votre REAMDE.adoc (fonction dans la barre de menu d'édition du .adoc).
+TIP: sous PhpStorm, vous pouvez extraire une version *PDF* de votre README.adoc (fonction dans la barre de menu d'édition du .adoc).
 
-TIP: Pour le travail en binôme, sous PhpStorm, voir le concept (et outil)  _code with me_
+TIP: Pour le travail en binôme ou trinome, sous PhpStorm, voir le concept (et outil)  _code with me_
 
 NOTE: n'hésitez pas à consulter le code source de ce README.adoc et sa version .md.
 
