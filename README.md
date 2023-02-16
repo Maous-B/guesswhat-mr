@@ -2,9 +2,9 @@
 
 Prise en main de la POO avec PHP
 
-Niveau : Deuxième année de BTS SIO SLAM
+Niveau : Première ou deuxième année de BTS SIO SLAM
 
-Prérequis : bases de la programmation, PHP 7 ou supérieur installé sur votre machine de dev.
+Prérequis : bases de la programmation, PHP 8 ou supérieur installé sur votre machine de dev.
 
 ## Thème 
 
@@ -156,20 +156,18 @@ Une fois cloné, **aller à la racine du projet** puis lancer les commandes suiv
 
 * `composer install`  (le téléchargement et installation des composants déclarés dans le fichier `composer.json` peut prendre quelques minutes)
 
-* `./bin/phpunit --version` (le premier lancement de cette commande provoquera l'installation du plugin `phpunit`, puis lancera les tests.
-  Le résultat devrait être, à un numéro de version prêt : `PHPUnit 7.5.20 by Sebastian Bergmann and contributors.` )
+:information_source: Sous windows la commande est `.\vendor\bin\phpunit --version` (remarquez l'usage de `\` au lieu de `/` )
 
-:information_source: Sous windows la commande est `php .\bin\phpunit --version` (remarquez l'usage de `\` au lieu de `/` )
-
-:information_source: À ce niveau là, ne vous préoccupez pas de l'écosystème Symfony, il serait étudié très bientôt.
+* `.\vendor\bin\phpunit --version` (le premier lancement de cette commande provoquera l'installation du plugin `phpunit`, puis lancera les tests.
+  Le résultat devrait être, à un numéro de version prêt : `PHPUnit 9.6.3 by Sebastian Bergmann and contributors.` )
 
 ### Tester le bon fonctionnement de ce petit existant
 
 #### Lancement des tests unitaires
   
-À **la racine du projet** du projet, lancer la commande : `./bin/phpunit`
+À **la racine du projet** du projet, lancer la commande : `.\vendor\bin\phpunit tests`
 
-Le système lance alors l'exécution des tests unitaires du dossier `tests` du projet. 8 tests sont exécutés (100 % sans bug), dont 4 en échec (`FAILURE`) :
+Le système lance alors l'exécution des tests unitaires du dossier `tests` du projet. 9 tests sont exécutés (100 % sans bug), dont 4 en échec (`FAILURE`) :
 
 ```
 [racine du projet]$ ./bin/phpunit
@@ -205,7 +203,7 @@ FAILURES!
 Tests: 8, Assertions: 10, Failures: 4.
 ```
 
-Cette commande a lancé 8 tests unitaires (8 fonctions) situés dans le dossier `tests`. Les tests vérifient le comportement de certains objets du projet (instances des classes `CardTest` et `GuessTest`)
+Cette commande a lancé 9 tests unitaires (9 fonctions) situés dans le dossier `tests`. Les tests vérifient le comportement de certains objets du projet (instances des classes `CardTest` et `GuessTest`)
 
 Avant d'aller plus loin, vous devez étudier le concept de _test unitaire_ et prendre connaissance des bonnes pratiques de documentation du code.
 

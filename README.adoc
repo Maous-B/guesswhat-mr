@@ -2,9 +2,9 @@
 
 Prise en main de la POO avec PHP
 
-Niveau : Deuxième année de BTS SIO SLAM
+Niveau : Première ou deuxième année de BTS SIO SLAM
 
-Prérequis : bases de la programmation, PHP 7 ou supérieur installé sur votre machine de dev.
+Prérequis : bases de la programmation, PHP 8 ou supérieur installé sur votre machine de dev.
 
 == Thème 
 
