@@ -51,4 +51,8 @@ class Card
   }
 
 
+  public function __toString()
+  {
+      return $this->name. " de ". $this->color;
+  }
 }

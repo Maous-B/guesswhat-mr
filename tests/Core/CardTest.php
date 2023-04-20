@@ -35,27 +35,45 @@ class CardTest extends TestCase
 
   public function testCompareSameNameNoSameColor()
   {
+      $card1 = new Card('As', 'Trefle');
+      $card2 = new Card('As', 'Carreau');
     // TODO
-    $this->fail("not implemented !");
+    //$this->fail("not implemented !");
+      $this->assertNotEquals(0, CardGame::compare($card1, $card2), "ça devrait être différent.");
+      $this->assertEquals(-1, CardGame::compare($card1, $card2), "ça devrait être différent.");
+
+      $card1 = new Card('As', 'Carreau');
+      $card2 = new Card('As', 'Trefle');
+
+      $this->assertNotEquals(0, CardGame::compare($card1, $card2), "ça devrait être différent.");
+      $this->assertEquals(1, CardGame::compare($card1, $card2), "ça devrait être différent.");
+
   }
 
   public function testCompareNoSameNameSameColor()
   {
-    // TODO
-    $this->fail("not implemented !");
+      $card1 = new Card('Valet', 'trefle');
+      $card2 = new Card('Dix', 'trefle');
+
+      $this->assertEquals(1, CardGame::compare($card1, $card2), 'le 2 de pique ne renvoie pas -1');
   }
 
+  // NO SAME NAME NO SAME COLOR
   public function testCompareNoSameNameNoSameColor()
   {
+      $card1 = new Card('valet', 'Pique');
+      $card2 = new Card('dix', 'Trefle');
     // TODO
-    $this->fail("not implemented !");
+      $this->assertEquals(1, CardGame::compare($card1, $card2), 'le 2 de pique ne renvoie pas -1');
   }
 
+  // TEST LES STRINGS
   public function testToString()
   {
     // TODO vérifie que la représentation textuelle
     // d'une carte est conforme à ce que vous attendez
-    $this->fail("not implemented !");
+      $card1 = new Card('Valet', 'trefle');
+      $this->assertEquals("Valet de trefle", $card1->__toString(), "ne renvoie pas valet de trefle");
   }
 
 }

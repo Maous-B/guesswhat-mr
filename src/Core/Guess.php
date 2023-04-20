@@ -29,15 +29,20 @@ class Guess
    * @param Card $selectedCard
    * @param bool $withHelp
    */
-  public function __construct(CardGame $cardGame, $selectedCard = null, bool $withHelp = true)
+  public function __construct(CardGame $cardGame, $selectedCard = null, $withHelp = true)
   {
     // TODO si $cardGame est null, affecter alors un jeu de 32 par défaut
     $this->cardGame = $cardGame;
 
     if ($selectedCard) {
       $this->selectedCard = $selectedCard;
-    }  else {
+    }
+
+    else {
       // TODO tirer aléatoirement une carte
+        $numero = rand(0, count($cardGame->getCards()) - 1);
+
+        $this->selectedCard = $cardGame->getCard($numero);
     }
 
     $this->withHelp = $withHelp;

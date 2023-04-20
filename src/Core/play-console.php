@@ -10,14 +10,31 @@ $game =  new App\Core\Guess($cardGame, $cardGame->getCard(0), false);
 
 $userCardIndex = readline("Entrez une position de carte dans le jeu : ");
 
+echo "=== Choix de carte === \n";
+
+$nomCarte = readline("Nom : ");
+$couleurCarte = readline("Couleur : ");
+
+$carteChoisie = new \App\Core\Card($nomCarte, $couleurCarte);
+echo $carteChoisie;
+
+while(1)
+{
+    if($game->isMatch($carteChoisie))
+    {
+        echo " Bravo ! \n";
+        break;
+    }
+    else
+    {
+        echo " Loupé !\n";
+        $nomCarte = readline("Nom : ");
+        $couleurCarte = readline("Couleur : ");
+    }
+}
 // code naïf, car aucun contrôle de validité de $userCardIndex...
 $userCard = $cardGame->getCard($userCardIndex);
 
-if ($game->isMatch($userCard)) {
-  echo "Bravo ! \n";
-} else {
-  echo "Loupé !\n";
-}
 
 echo " ==== Fin prématurée de la partie ====\n";
 echo "*** Terminé ***\n";

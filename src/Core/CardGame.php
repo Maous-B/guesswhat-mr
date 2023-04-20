@@ -13,8 +13,8 @@ class CardGame
   /**
    * Relation d'ordre sur les couleurs
    */
-   const ORDER_COLORS=['trefle'=> 1, 'carreau'=>2, 'coeur'=>3, 'pique'=>4 ];
-
+   const ORDER_COLORS =['trefle'=> 1, 'carreau'=>2, 'coeur'=>3, 'pique'=>4 ];
+    const ORDER_NAMES =['deux' => 1, 'trois' => 2, 'quatre' => 3, 'cinq' => 4, 'six' => 5, 'sept' => 6, 'huit' => 7, 'neuf' => 8, 'dix' => 9, 'valet' => 10, 'dame' => 11, 'roi' => 12];
 
   /**
    * @var $cards array of Cards
@@ -39,6 +39,20 @@ class CardGame
   }
 
   // TODO ajouter une méthode reOrder qui remet le paquet en ordre
+  public function reOrder()
+  {
+
+  }
+
+
+
+
+
+
+
+
+
+
 
   /** définir une relation d'ordre entre instance de Card.
    * à valeur égale (name) c'est l'ordre de la couleur qui prime
@@ -62,16 +76,25 @@ class CardGame
    */
   public static function compare(Card $c1, Card $c2) : int
   {
-    // TODO code naïf : il faudrait prendre en compte la relation d'ordre sur la couleur et le nom
 
     $c1Name = strtolower($c1->getName());
     $c2Name = strtolower($c2->getName());
 
+    $c1Color = strtolower($c1->getColor());
+    $c2Color = strtolower($c2->getColor());
+
     if ($c1Name === $c2Name) {
+        if($c1Color === $c2Color)
+        {
+            return 0;
+        }
+        else
+        {
+            return (self::ORDER_COLORS[$c1Color] > self::ORDER_COLORS[$c2Color] ? +1 : -1);
+        }
         return 0;
     }
-
-    return ($c1Name > $c2Name) ? +1 : -1;
+      return (self::ORDER_NAMES[$c1Name] > self::ORDER_NAMES[$c2Name] ? +1 : -1);
   }
 
   /**
@@ -80,8 +103,14 @@ class CardGame
    * @return array of Cards
    */
   public static function factory32Cards() : array {
-     // TODO création d'un jeu de 32 cartes
-    $cards = [new Card('As', 'Trefle'), new Card('7', 'Trefle')];
+      // TODO création d'un jeu de 32 cartes
+    foreach(self::ORDER_NAMES as $name => $valName)
+    {
+        foreach(self::ORDER_COLORS as $color => $valColor)
+            {
+                $cards[] = new Card($name, $color);
+            }
+    }
     return $cards;
   }
 
@@ -99,6 +128,14 @@ class CardGame
   {
     return 'CardGame : '.count($this->cards).' carte(s)';
   }
+
+    /**
+     * @return array
+     */
+    public function getCards(): array
+    {
+        return $this->cards;
+    }
 
 }
 

@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 class CardGameTest extends TestCase
 {
-  /*
+
   public function testToString2Cards()
   {
     $jeudecarte = new CardGame([new Card('As', 'Pique'), new Card('Roi', 'Coeur')]);
@@ -38,7 +38,8 @@ class CardGameTest extends TestCase
 
   public function testFactoryCardGame32()
   {
-
+    $paquet = CardGame::factory32Cards();
+    $this->assertEquals(52, count($paquet));
   }
-  */
+
 }
