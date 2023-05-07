@@ -31,9 +31,9 @@ Les étapes d'un scénario typique d'usage sont
 
 # Compte-rendu
 
-== Première partie
+== Première partie : Prise en main
 
-== Deuxième partie
+== Deuxième partie : Implémentation des TODOs de CardTest
 
 == Troisième partie : Conception de tests unitaires pour CardGame32
 
