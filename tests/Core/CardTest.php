@@ -37,8 +37,6 @@ class CardTest extends TestCase
   {
       $card1 = new Card('As', 'Trefle');
       $card2 = new Card('As', 'Carreau');
-    // TODO
-    //$this->fail("not implemented !");
       $this->assertNotEquals(0, CardGame::compare($card1, $card2), "ça devrait être différent.");
       $this->assertEquals(-1, CardGame::compare($card1, $card2), "ça devrait être différent.");
 
@@ -63,14 +61,12 @@ class CardTest extends TestCase
   {
       $card1 = new Card('valet', 'Pique');
       $card2 = new Card('dix', 'Trefle');
-    // TODO
       $this->assertEquals(1, CardGame::compare($card1, $card2), 'le 2 de pique ne renvoie pas -1');
   }
 
   // TEST LES STRINGS
   public function testToString()
   {
-    // TODO vérifie que la représentation textuelle
     // d'une carte est conforme à ce que vous attendez
       $card1 = new Card('Valet', 'trefle');
       $this->assertEquals("Valet de trefle", $card1->__toString(), "ne renvoie pas valet de trefle");
