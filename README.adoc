@@ -29,7 +29,7 @@ Les étapes d'un scénario typique d'usage sont
 * Structure de données, recherche d'un élément dans une liste
 * Analyse des actions du joueur (fonction du nombre de cartes, aides à la décision)  
 
-== Compte-rendu
+# Compte-rendu
 
 == Première partie
 
