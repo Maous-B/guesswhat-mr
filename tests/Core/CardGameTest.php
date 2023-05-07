@@ -23,23 +23,29 @@ class CardGameTest extends TestCase
 
   public function testCompare()
   {
-
+      $card1 = new Card('as', 'pique');
+      $card2 = new Card('as', 'pique');
+      $jeudecarte = new CardGame([$card1, $card2]);
+      $this->assertEquals(0, $jeudecarte->compare($card1, $card2));
   }
 
   public function testShuffle()
   {
-
+      $jeudecarte = new CardGame(CardGame::factory52Cards());
+      $cartesMelangees = $jeudecarte->shuffle($jeudecarte->getCards());
+      $this->assertEquals($cartesMelangees, $jeudecarte->shuffle($jeudecarte->getCards()));
   }
 
   public function testGetCard()
   {
-
+      $jeudecarte = new CardGame(CardGame::factory52Cards());
+      $this->assertEquals('as de trefle', $jeudecarte->getCard(0));
   }
 
   public function testFactoryCardGame32()
   {
     $paquet = CardGame::factory32Cards();
-    $this->assertEquals(52, count($paquet));
+    $this->assertEquals(32, count($paquet));
   }
 
 }
