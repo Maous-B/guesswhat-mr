@@ -35,6 +35,6 @@ Les étapes d'un scénario typique d'usage sont
 
 == Deuxième partie
 
-== Troisième partie
+== Troisième partie : Conception de tests unitaires pour CardGame32
 
-== Quatrième partie
+== Quatrième partie : Conception de tests unitaires pour Guess
