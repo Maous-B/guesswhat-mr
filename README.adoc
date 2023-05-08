@@ -34,6 +34,7 @@ Les étapes d'un scénario typique d'usage sont
 == Première partie : Prise en main
 
 == Deuxième partie : Implémentation des TODOs de CardTest
+
 <?php
 
 namespace App\Tests\Core;
@@ -51,7 +52,6 @@ class CardTest extends TestCase
     $this->assertEquals('As', $card->getName());
     $card = new Card('2', 'Trèfle');
     $this->assertEquals('2', $card->getName());
-
   }
 
   public function testColor()
@@ -81,14 +81,12 @@ class CardTest extends TestCase
 
       $this->assertNotEquals(0, CardGame::compare($card1, $card2), "ça devrait être différent.");
       $this->assertEquals(1, CardGame::compare($card1, $card2), "ça devrait être différent.");
-
   }
 
   public function testCompareNoSameNameSameColor()
   {
       $card1 = new Card('Valet', 'trefle');
       $card2 = new Card('Dix', 'trefle');
-
       $this->assertEquals(1, CardGame::compare($card1, $card2), 'le 2 de pique ne renvoie pas -1');
   }
 
