@@ -64,10 +64,8 @@ Les étapes d'un scénario typique d'usage sont
       $card2 = new Card('As', 'Carreau');
       $this->assertNotEquals(0, CardGame::compare($card1, $card2), "ça devrait être différent.");
       $this->assertEquals(-1, CardGame::compare($card1, $card2), "ça devrait être différent.");
-
       $card1 = new Card('As', 'Carreau');
       $card2 = new Card('As', 'Trefle');
-
       $this->assertNotEquals(0, CardGame::compare($card1, $card2), "ça devrait être différent.");
       $this->assertEquals(1, CardGame::compare($card1, $card2), "ça devrait être différent.");
   }
@@ -79,7 +77,6 @@ Les étapes d'un scénario typique d'usage sont
       $this->assertEquals(1, CardGame::compare($card1, $card2), 'le 2 de pique ne renvoie pas -1');
   }
 
-  // NO SAME NAME NO SAME COLOR
   public function testCompareNoSameNameNoSameColor()
   {
       $card1 = new Card('valet', 'Pique');
