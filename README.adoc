@@ -35,6 +35,7 @@ Les étapes d'un scénario typique d'usage sont
 
 == Deuxième partie : Implémentation des TODOs de CardTest
 
+{
 <?php
 
 namespace App\Tests\Core;
@@ -106,6 +107,7 @@ class CardTest extends TestCase
       $this->assertEquals("Valet de trefle", $card1->__toString(), "ne renvoie pas valet de trefle");
   }
 
+}
 }
 
 == Troisième partie : Conception de tests unitaires pour CardGame32
