@@ -32,8 +32,7 @@ class CardGameTest extends TestCase
   public function testShuffle()
   {
       $jeudecarte = new CardGame(CardGame::factory52Cards());
-      $cartesMelangees = $jeudecarte->shuffle($jeudecarte->getCards());
-      $this->assertEquals($cartesMelangees, $jeudecarte->shuffle($jeudecarte->getCards()));
+      $this->assertEquals($jeudecarte->shuffleCards($jeudecarte->getCards()), $jeudecarte->shuffleCards($jeudecarte->getCards()), 'Erreur');
   }
 
   public function testGetCard()
