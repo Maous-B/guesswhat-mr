@@ -33,16 +33,15 @@ class CardGame
   /**
    * Brasse le jeu de cartes (mélanger)
    */
-  public function shuffle(array $paquetDeCartes) : array
+  public function shuffleCards(array $paquetDeCartes) : array
   {
-      $cartesMelangees = shuffle($paquetDeCartes);
-      return $cartesMelangees;
+      shuffle($paquetDeCartes);
+      return $paquetDeCartes;
   }
 
-  public function reOrder(array $paquetDeCartes) : array
+  public function reOrderCards(array $paquetDeCartes) : array
   {
-    $cartesRangees = $this->getCards();
-    return $cartesRangees;
+    return $paquetDeCartes;
   }
 
   /** définir une relation d'ordre entre instance de Card.
