@@ -123,8 +123,18 @@ class CardGame
     return  $this->cards[$index];
   }
 
+  public function getCardName(int $index) : string
+  {
+      return $this->cards[$index][0];
+  }
 
-  /**
+    public function getCardColor(int $index) : string
+    {
+        return $this->cards[$index][1];
+    }
+
+
+    /**
    * @see https://www.php.net/manual/fr/language.oop5.magic.php#object.tostring
    * @return string
    */
