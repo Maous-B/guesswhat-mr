@@ -29,9 +29,8 @@ class Guess
    * @param Card $selectedCard
    * @param bool $withHelp
    */
-  public function __construct(CardGame $cardGame, $selectedCard = null, $withHelp = true)
+  public function __construct(CardGame $cardGame, $selectedCard = null, $withHelp = false)
   {
-    // TODO si $cardGame est null, affecter alors un jeu de 32 par défaut
     $this->cardGame = $cardGame;
 
     if ($selectedCard) {
@@ -39,7 +38,6 @@ class Guess
     }
 
     else {
-      // TODO tirer aléatoirement une carte
         $numero = rand(0, count($cardGame->getCards()) - 1);
 
         $this->selectedCard = $cardGame->getCard($numero);
@@ -61,6 +59,14 @@ class Guess
   {
     return CardGame::compare($card, $this->selectedCard) === 0;
   }
+
+  public function gameAssist($îndiceNom, $indiceCouleur) : string
+  {
+
+
+      return "Couleur : $couleur. La carte se trouve entre la carte ";
+  }
+
 
 }
 
