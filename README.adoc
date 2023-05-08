@@ -134,3 +134,9 @@ Les étapes d'un scénario typique d'usage sont
 
 
 == Quatrième partie : Conception de tests unitaires pour Guess
+
+  public function testDefaultValueWithHelp() {
+    $cardGame = new CardGame(CardGame::factory52Cards());
+    $guess = new Guess($cardGame);
+    $this->assertEquals(false, $guess->getWithHelp());
+  }
