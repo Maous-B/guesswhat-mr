@@ -5,7 +5,7 @@ namespace App\Core;
 use phpDocumentor\Reflection\Types\Integer;
 
 /**
- * Class CardGame : un jeu de cartes.
+ * Class CardGame : un jeu de cartes.€€€€€
  * @package App\Core
  */
 class CardGame
@@ -13,8 +13,8 @@ class CardGame
   /**
    * Relation d'ordre sur les couleurs
    */
-   const ORDER_COLORS =['trefle'=> 1, 'carreau'=>2, 'coeur'=>3, 'pique'=>4 ];
-    const ORDER_NAMES =['deux' => 1, 'trois' => 2, 'quatre' => 3, 'cinq' => 4, 'six' => 5, 'sept' => 6, 'huit' => 7, 'neuf' => 8, 'dix' => 9, 'valet' => 10, 'dame' => 11, 'roi' => 12];
+   const ORDER_COLORS =['trefle'=> 1, 'carreau'=>2, 'coeur'=>3, 'pique'=>4];
+   const ORDER_NAMES =['as' => 0, 'deux' => 1, 'trois' => 2, 'quatre' => 3, 'cinq' => 4, 'six' => 5, 'sept' => 6, 'huit' => 7, 'neuf' => 8, 'dix' => 9, 'valet' => 10, 'dame' => 11, 'roi' => 12];
 
   /**
    * @var $cards array of Cards
@@ -31,28 +31,19 @@ class CardGame
   }
 
   /**
-   * Brasse le jeu de cartes
+   * Brasse le jeu de cartes (mélanger)
    */
-  public function shuffle()
+  public function shuffle(array $paquetDeCartes) : array
   {
-    // TODO (voir les fonctions sur les tableaux)
+      $cartesMelangees = shuffle($paquetDeCartes);
+      return $cartesMelangees;
   }
 
-  // TODO ajouter une méthode reOrder qui remet le paquet en ordre
-  public function reOrder()
+  public function reOrder(array $paquetDeCartes) : array
   {
-
+    $cartesRangees = $this->getCards();
+    return $cartesRangees;
   }
-
-
-
-
-
-
-
-
-
-
 
   /** définir une relation d'ordre entre instance de Card.
    * à valeur égale (name) c'est l'ordre de la couleur qui prime
@@ -102,8 +93,9 @@ class CardGame
    * (afin de simplifier son instanciation)
    * @return array of Cards
    */
-  public static function factory32Cards() : array {
-      // TODO création d'un jeu de 32 cartes
+
+  // 52 CARTES
+  public static function factory52Cards() : array {
     foreach(self::ORDER_NAMES as $name => $valName)
     {
         foreach(self::ORDER_COLORS as $color => $valColor)
@@ -114,7 +106,19 @@ class CardGame
     return $cards;
   }
 
-  // TODO manque PHPDoc avec pré-condition sur les valeurs acceptables de $index
+  public static function factory32Cards() : array {
+      foreach(self::ORDER_NAMES as $name => $valName)
+      {
+          foreach(self::ORDER_COLORS as $color => $valColor)
+          {
+              if($valName >= 6 or $valName < 1)
+                  {
+                      $cards[] = new Card($name, $color);
+                  }
+          }
+      }
+      return $cards;
+  }
   public function getCard(int $index) : Card {
     return  $this->cards[$index];
   }
